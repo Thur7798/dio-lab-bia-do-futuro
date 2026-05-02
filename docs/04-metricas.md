@@ -28,23 +28,23 @@ Crie testes simples para validar seu agente:
 
 ### Teste 1: Consulta de gastos
 - **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** R$570,00 baseado no `transacoes.csv`
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 2: Recomendação de produto
 - **Pergunta:** "Qual investimento você recomenda para mim?"
 - **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
-- **Pergunta:** "Qual a previsão do tempo?"
+- **Pergunta:** "Corinthians campeão da libertadores?"
 - **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
+- **Pergunta:** "Quanto rende o produto BBDC3 na Buvespa?"
 - **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ---
 
@@ -53,10 +53,20 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+- O agente respondeu de forma clara e acessível.
+
+- Evitou inventar valores específicos de rentabilidade, mantendo a segurança da informação.
+
+- Explicou o conceito de forma educativa, alinhado ao objetivo de ensinar finanças.
+
+- Seguiu a regra de não dar recomendações diretas de produtos sem contexto do perfil.
 
 **O que pode melhorar:**
-- [Liste aqui]
+- Até agora não foram identificados pontos críticos de melhoria.
+
+- Em cenários futuros, pode ser interessante reforçar ainda mais a distinção entre ações (como BBDC3, que é uma ação do Bradesco) e produtos financeiros (como CDB), para evitar confusão de termos.
+
+- Testes adicionais com perguntas fora do escopo podem ajudar a validar a consistência do agente em situações inesperadas.
 
 ---
 
