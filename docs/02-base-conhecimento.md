@@ -41,20 +41,42 @@ Os arquivos JSON e CSV são carregados no início da sessão e ficam disponívei
 
 ```
 Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
 
----
+Nome: João Silva
+Idade: 32 anos
+Perfil: Moderado
+Objetivo: Construir reserva de emergência
+Patrimônio total: R$ 15.000
+Reserva atual: R$ 10.000
+Saldo disponível: R$ 5.000
 
 Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-- 05/11: Transporte - R$ 120
 
----
+01/10: Salário – R$ 5.000 (entrada)
+02/10: Aluguel – R$ 1.200 (saída)
+03/10: Supermercado – R$ 450 (saída)
+05/10: Netflix – R$ 55,90 (saída)
+07/10: Farmácia – R$ 89 (saída)
+10/10: Restaurante – R$ 120 (saída)
+12/10: Uber – R$ 45 (saída)
+15/10: Conta de Luz – R$ 180 (saída)
+20/10: Academia – R$ 99 (saída)
+25/10: Combustível – R$ 250 (saída)
+28/10: Aplicação em Tesouro Selic – R$ 500 (saída)
 
 Histórico de atendimento:
-- Perguntou sobre reserva de emergência
-- Solicitou explicação sobre perfil de investido
+
+15/09: Perguntou sobre CDB Liquidez Diária
+22/09: Problema no app (extrato)
+01/10: Solicitou explicação sobre Tesouro Selic
+12/10: Acompanhou progresso da reserva de emergência
+25/10: Atualização cadastral (e-mail e telefone)
+
+Produtos disponíveis:
+
+Tesouro Selic → Risco baixo, aporte mínimo R$ 30, indicado para reserva de emergência
+CDB Liquidez Diária → Risco baixo, aporte mínimo R$ 100, indicado para segurança com liquidez diária
+LCI/LCA → Risco baixo, aporte mínimo R$ 1.000, indicado para quem pode esperar 90 dias
+Fundo Multimercado → Risco médio, aporte mínimo R$ 500, indicado para perfil moderado
+Fundo de Ações → Risco alto, aporte mínimo R$ 100, indicado para perfil arrojado
 ```
