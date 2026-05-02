@@ -25,14 +25,14 @@ Agente conversacional desenvolvido como projeto final do laboratório DIO **"Bia
 
 ## 🏗️ Arquitetura
 
-```
-Cliente → Interface (Streamlit) → LLM (Ollama local)
-                                       ↓
-                              Base de Conhecimento (JSON/CSV)
-                                       ↓
-                              Validação anti-alucinação
-                                       ↓
-                                   Resposta
+```mermaid
+flowchart TD
+    A[Cliente] --> B[Interface]
+    B --> C[LLM]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Validação]
+    E --> F[Resposta]
 ```
 
 ---
