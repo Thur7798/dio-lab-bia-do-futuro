@@ -1,135 +1,94 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 💰 ArielFIN — Educador Financeiro com IA Generativa
 
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+Agente conversacional desenvolvido como projeto final do laboratório DIO **"Bia do Futuro"**, com foco em educação financeira para iniciantes.
 
 ---
 
-## O Que Você Deve Entregar
+## 🎯 O que é
 
-### 1. Documentação do Agente
+**ArielFIN** é um chatbot educativo que traduz conceitos de finanças pessoais em linguagem simples e acessível. Ele não dá dicas de investimento — ele ensina você a entender o seu dinheiro.
 
-Defina **o que** seu agente faz e **como** ele funciona:
-
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+> *"Oi! Vamos simplificar suas finanças?"*
 
 ---
 
-### 2. Base de Conhecimento
+## 🧠 Persona
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+| Atributo | Detalhe |
+|---|---|
+| **Nome** | ArielFIN |
+| **Estilo** | Didático, amigável, sem pressa |
+| **Linguagem** | Informal, sem jargões técnicos |
+| **Público** | Quem está começando a cuidar do próprio dinheiro |
 
 ---
 
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
+## 🏗️ Arquitetura
 
 ```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+Cliente → Interface (Streamlit) → LLM (Ollama local)
+                                       ↓
+                              Base de Conhecimento (JSON/CSV)
+                                       ↓
+                              Validação anti-alucinação
+                                       ↓
+                                   Resposta
 ```
 
 ---
 
-## Dicas Finais
+## 📁 Estrutura do Repositório
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
+```
+dio-lab-bia-do-futuro/
+├── data/                          # Dados mockados
+│   ├── transacoes.csv
+│   ├── historico_atendimento.csv
+│   ├── perfil_investidor.json
+│   └── produtos_financeiros.json
+├── docs/
+│   ├── 01-documentacao-agente.md  # Caso de uso e persona
+│   ├── 02-base-conhecimento.md    # Estratégia de dados
+│   ├── 03-prompts.md              # Engenharia de prompts
+│   ├── 04-metricas.md             # Avaliação do agente
+│   └── 05-pitch.md                # Apresentação do projeto
+├── src/
+│   └── app.py                     # Aplicação Streamlit
+├── assets/
+└── examples/
+```
+
+---
+
+## 🛡️ Segurança
+
+- Responde apenas com base nos dados fornecidos
+- Admite quando não sabe a resposta
+- **Não** recomenda investimentos específicos
+- **Não** acessa dados bancários reais
+- **Não** substitui consultoria financeira profissional
+
+---
+
+## 🚀 Como Rodar
+
+```bash
+# Instale as dependências
+pip install streamlit
+
+# Suba o modelo local (requer Ollama instalado)
+ollama run llama3
+
+# Execute a aplicação
+streamlit run src/app.py
+```
+
+---
+
+## 🛠️ Stack
+
+`Python` · `Streamlit` · `Ollama` · `LLM local` · `JSON/CSV`
+
+---
+
+*Projeto desenvolvido para o laboratório DIO — Bia do Futuro.*
